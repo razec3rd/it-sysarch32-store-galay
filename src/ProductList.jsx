@@ -18,15 +18,18 @@ function ProductList() {
   }, []);
 
   return (
-    <div>
+<div className="container">
       <h1>Product List</h1>
-      <ul>
+      <div className="product-list-container">
         {products.map(product => (
-          <li key={product.id}>
-            <Link to={`/product/${product.id}`}>{product.product_name}</Link>
-          </li>
+          <div key={product.id} className="product-item">
+            <Link to={`/product/${product.id}`}>
+              <img src={product.image_url} alt={product.product_name} />
+              <h3>{product.product_name}</h3>
+            </Link>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

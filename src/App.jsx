@@ -6,10 +6,16 @@ import ProductDetails from './ProductDetails';
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<ProductList />} />
-        <Route path="/product/:id" element={<ProductDetails />} />
-      </Routes>
+      <div>
+        <div className="navbar">
+          <h1>Raz Shop</h1>
+        </div>
+        <div className="divider"></div>
+        <Routes>
+          <Route path="/" element={<ProductList />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
+        </Routes>
+      </div>
     </Router>
   );
 }
